@@ -2,231 +2,699 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET Identity</h1>
-    <p class="lead">ASP.NET Identity is the membership system for ASP.NET apps. Following are the features of ASP.NET Identity in this sample application.</p>
-    <p><a href="http://www.asp.net/identity" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-</div>
+<!-- ======= Intro Section ======= -->
+<div id="home" class="intro route bg-image" style="background-image: url(/Content/img/pond_sunset.JPG)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+        <div class="table-cell">
+            <div class="container">
+                <!--<p class="display-6 color-d">Hello, world!</p>-->
+                <h1 class="intro-title mb-4">I am Ben Slenker</h1>
+                <p class="intro-subtitle"><span class="text-slider-items">Man's Man,Farmer's Farmer,Web Developer,Web Designer,Frontend Developer</span><strong class="text-slider"></strong></p>
+                <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+            </div>
+        </div>
+    </div>
+</div><!-- End Intro Section -->
 
-<div class="row">
-    <div class="col-md-4">
-        <dl>
-            <dt>Initialize ASP.NET Identity</dt>
-            <dd>
-                You can initialize ASP.NET Identity when the application starts. Since ASP.NET Identity is Entity Framework based in this sample,
-                you can create DatabaseInitializer which is configured to get called each time the app starts.
-                <strong>Please look in App_Start\IdentityConfig.cs</strong>
-                This code shows the following
-                <ul>
-                    <li>When should the Initializer run and when should the database be created</li>
-                    <li>Create Admin user</li>
-                    <li>Create Admin role</li>
-                    <li>Add Admin user to Admin role</li>
-                </ul>
-            </dd>
-        </dl>
-    </div>
-    <div class="col-md-4">
-        <dl>
-            <dt>Add profile data for the user</dt>
-            <dd>
-                <a href="http://blogs.msdn.com/b/webdev/archive/2013/10/16/customizing-profile-information-in-asp-net-identity-in-vs-2013-templates.aspx">Please follow this tutorial.</a>
+<main id="main">
 
-                <ul>
-                    <li>Add profile information in the Users Table</li>
-                    <li>Look in Models\IdentityModels.cs for examples</li>
-                </ul>
-            </dd>
-        </dl>
-    </div>
-    <div class="col-md-4">
-        <dl>
-            <dt>Validation</dt>
-            <dd>
-                When you create a User using a username or password, the Identity system performs validation on the username and password, and the passwords are hashed before they are
-                stored in the database. You can customize the validation by changing some of the properties of the validators such as Turn alphanumeric on/off, set minimum password length
-                or you can write your own custom validators and register them with the UserManager.
-            </dd>
-        </dl>
-    </div>
-    <div class="col-md-4">
-        <dl>
-            <dt>Register a user and login</dt>
-            <dd>
-                Click @Html.ActionLink("Register", "Register", "Account") and see the code in AccountController.cs and Register Action.
-                Click @Html.ActionLink("Log in", "Login", "Account") and see the code in AccountController.cs and Login Action.
-            </dd>
-        </dl>
-    </div>
-    <div class="col-md-4">
-        <dl>
-            <dt>Social Logins</dt>
-            <dd>
-                You can the support so that users can login using their Facebook, Google, Twitter, Microsoft Account and more.
-            </dd>
-            <dd>
-                <ul>
-                    <li>
-                        <a href="http://www.windowsazure.com/en-us/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database/">Add Social Logins</a>
-                    </li>
-                    <li>
-                        <a href="http://blogs.msdn.com/b/webdev/archive/2013/10/16/get-more-information-from-social-providers-used-in-the-vs-2013-project-templates.aspx">Get more data about the user when they login suing Facebook</a>
-                    </li>
-                </ul>
-            </dd>
-        </dl>
-    </div>
-    <div class="col-md-4">
-        <dl>
-            <dt>Basic User Management</dt>
-            <dd>
-                Do Create, Update, List and Delete Users.
-                Assign a Role to a User.
-                Only Users In Role Admin can access this page. This uses the [Authorize(Roles = "Admin")] on the UserAdmin controller.
-            </dd>
-        </dl>
-    </div>
-    <div class="col-md-4">
-        <dl>
-            <dt>Basic Role Management</dt>
-            <dd>
-                Do Create, Update, List and Delete Roles.
-                Only Users In Role Admin can access this page. This authorization is doen by using the [Authorize(Roles = "Admin")] on the RolesAdmin controller.
-            </dd>
-        </dl>
-    </div>
-    <div class="col-md-4">
-        <dl>
-            <dt>Account Confirmation</dt>
-            <dd>
-                When you register a new account, you will be sent an email confirmation.
-                You can use an email service such as <a href="http://www.windowsazure.com/en-us/documentation/articles/sendgrid-dotnet-how-to-send-email/">SendGrid</a> which integrate nicely with Windows Azure and requires no configuration or
-                set up an SMTP server to send email.
-                You can send email using the EmailService which is registered in App_Start\IdentityConfig.cs
-            </dd>
-        </dl>
-    </div>
-    <div class="col-md-4">
-        <dl>
-            <dt>Two-Factor Authentication</dt>
-            <dd>
-                This sample shows how you can use Two-Factor authentication. This sample has a SMS and email service registered where you can send SMS or email for sending the security code.
-                You can add more two-factor authentication factors such as QR codes and plug them into ASP.NET Identity.
-                <ul>
-                    <li>
-                        You can use a SMS using <a href="https://www.twilio.com/">Twilio</a> or use any means of sending SMS. Please <a href="https://www.twilio.com/docs/quickstart/csharp/sms/sending-via-rest">read</a> for more details on using Twilio.
-                        You can send SMS using the SmsService which is registered in App_Start\IdentityConfig.cs
-                    </li>
-                    <li>
-                        You can use an email service such as <a href="http://www.windowsazure.com/en-us/documentation/articles/sendgrid-dotnet-how-to-send-email/">SendGrid</a> or
-                        set up an SMTP server to send email.
-                        You can send email using the EmailService which is registered in App_Start\IdentityConfig.cs
-                    </li>
-
-                    <li>
-                        When you login, you can add a phone number by clicking the Manage page.
-                    </li>
-                    <li>
-                        Once you add a phone number and have the Phone service hooked to send a SMS, you will get a code through SMS to confirm your phone number.
-                    </li>
-                    <li>
-                        In the Manage page, you can turn on Two-Factor authentication.
-                    </li>
-                    <li>
-                        When you logout and login, after you enter the username and password, you will get an option of how to get the security code to use for two-factor authentication.
-                    </li>
-                    <li>
-                        You can copy the code from your SMS or email and enter in the form to login.
-                    </li>
-                    <li>
-                        The sample also shows how to protect against Brute force attacks against two-factor codes. When you enter a code incorrectly for 5 times then you will be
-                        lockedout for 5 min before you can enter a new code. These settings can be configured in App_Start\IdentityConfig.cs by setting  DefaultAccountLockoutTimeSpan and MaxFailedAccessAttemptsBeforeLockout on the UserManager.
-                    </li>
-                    <li>
-                        If the machine you are browsing this website is your own machine, you can choose to check the "Remember Me" option after you enter the code.
-                        This option will remember you forever on this machine and will not ask you for the two-factor authentication, the next time when you login to the website.
-                        You can change your "Remember Me" settings for two-factor authentication in the Manage page.
-                    </li>
-                </ul>
-            </dd>
-        </dl>
-    </div>
-    <div class="col-md-4">
-        <dl>
-            <dt>Account Lockout</dt>
-            <dd>
-                Provide a way to Lockout out the user if the user enters their password or two-factor codes incorrectly.
-                The number of invalid attempts and the timespan for the users are locked out can be configured.
-                A developer can optionally turn off Account Lockout for certain user accounts should they need to.
-            </dd>
-            <ul>
-                <li>Account LockOut settings can be configured in the UserManager in IdentityConfig.cs</li>
-            </ul>
-        </dl>
-    </div>
-    <div class="col-md-4">
-        <dl>
-            <dt>Security Token provider</dt>
-            <dd>
-                Support a way to regenerate the Security Token for the user in cases when the User changes there password or any other security related information such as removing an associated login(such as Facebook, Google, Microsoft Account etc).
-                This is needed to ensure that any tokens generated with the old password are invalidated. In the sample project, if you change the users password then a new token is generated for the user and any previous tokens are invalidated.
-                This feature provides an extra layer of security to your application since when you change your password, you will be logged out from everywhere (all other browsers) where you have logged into this application.
-            </dd>
-            <dd>
-                <ul>
-                    <li>The provider is registered when you add CookieAuthentication in StartupAuth to your application.</li>
-                </ul>
-            </dd>
-        </dl>
-    </div>
-    <div class="col-md-4">
-        <dl>
-            <dt>Password Reset</dt>
-            <dd>
-                Allows the user to reset their passwords if they have forgotten their password. In this sample users need to confirm their email before they can reset their passwords.
-            </dd>
-        </dl>
-    </div>
-    <div class="col-md-4">
-        <dl>
-            <dt>Custom Storage providers</dt>
-            <dd>
-                You can extend ASP.NET Identity to write your own custom storage provider for storing the ASP.NET Identity system and user data
-                in a persistance system of your choice such as MondoDb, RavenDb, Azure Table Storage etc.
-            </dd>
-            <dd>
-                <ul>
-                    <li>
-                        <a href="http://www.asp.net/identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity">
-                            learn more on how to implement your own storage provider
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about-mf sect-pt4 route">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="box-shadow-full">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-sm-6 col-md-5">
+                                        <div class="about-img">
+                                            <img src="~/Content/img/me headshot.png" class="img-fluid rounded b-shadow-a" alt="headshot of Ben Slenker">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 col-md-7">
+                                        <div class="about-info">
+                                            <p><span class="title-s">Name: </span> <span>Ben Slenker</span></p>
+                                            <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
+                                            <!--<p><span class="title-s">Email: </span> <span>bslenker@gmail.com</span></p>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-mf">
+                                    <p class="title-s">Skill</p>
+                                    <span>HTML</span> <span class="pull-right">95%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>CSS3</span> <span class="pull-right">85%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>PHP</span> <span class="pull-right">1%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 1%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>JAVASCRIPT</span> <span class="pull-right">1%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 1%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>C#</span> <span class="pull-right">10%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <span>SQL</span> <span class="pull-right">1%</span>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 1%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about-me pt-4 pt-md-0">
+                                    <div class="title-box-2">
+                                        <h5 class="title-left">
+                                            About me
+                                        </h5>
+                                    </div>
+                                    <p class="lead">
+                                        I'm a native Kansas Citian that went to Kansas State University and graduated with a Bachlors of Science in Sociology.  After graduating, I began my 15  year career with the City of Leawood as a Police Officer.  I also am a seven year veteran of the Missouri Air National Guard.
+                                    </p>
+                                    <p class="lead">
+                                        In my free time I enjoy spending time with my wife as we work on our farm.  We have an orchard, vegetable garden and livestock to keep us constantly intertained.
+                                    </p>
+                                    <!--<p class="lead">
+                                      Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+                                      Nulla porttitor accumsan
+                                      tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                                    </p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+    <!-- ======= Projects Section ======= -->
+    <section id="service" class="services-mf pt-5 route">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="title-box text-center">
+                        <h3 class="title-a">
+                            Projects
+                        </h3>
+                        <p class="subtitle-a">
+                            A few of my projects...
+                        </p>
+                        <div class="line-mf"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="service-ico">
+                            <span class="ico-circle"><i class="ion-monitor"></i></span>
+                        </div>
+                        <div class="service-content">
+                            <h2 class="s-title">Front End</h2>
+                            <p class="s-description text-center">
+                                Front End Development Studio Project
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="service-ico">
+                            <span class="ico-circle"><i class="ion-code-working"></i></span>
+                        </div>
+                        <div class="service-content">
+                            <h2 class="s-title">Middle Tier</h2>
+                            <p class="s-description text-center">
+                                C# dungeon game.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <div class="service-ico">
+                            <span class="ico-circle"><i class="ion-camera"></i></span>
+                        </div>
+                        <div class="service-content">
+                            <h2 class="s-title">Back End</h2>
+                            <p class="s-description text-center">
+                                Store Front Application Project
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="col-md-4">
+                <div class="service-box">
+                  <div class="service-ico">
+                    <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
+                  </div>-->
+                <!--<div class="service-content">
+                  <h2 class="s-title">Responsive Design</h2>
+                  <p class="s-description text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                    provident vitae! Magni
+                    tempora perferendis eum non provident.
+                  </p>
+                </div>-->
+                <!--</div>
+                </div>-->
+                <!--<div class="col-md-4">
+                  <div class="service-box">
+                    <div class="service-ico">
+                      <span class="ico-circle"><i class="ion-paintbrush"></i></span>
+                    </div>
+                    <div class="service-content">
+                      <h2 class="s-title">Graphic Design</h2>
+                      <p class="s-description text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                        provident vitae! Magni
+                        tempora perferendis eum non provident.
+                      </p>
+                    </div>
+                  </div>
+                </div>-->
+                <!--<div class="col-md-4">
+                  <div class="service-box">
+                    <div class="service-ico">
+                      <span class="ico-circle"><i class="ion-stats-bars"></i></span>
+                    </div>
+                    <div class="service-content">
+                      <h2 class="s-title">Marketing Services</h2>
+                      <p class="s-description text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                        provident vitae! Magni
+                        tempora perferendis eum non provident.
+                      </p>
+                    </div>
+                  </div>
+                </div>-->
+            </div>
+        </div>
+    </section><!-- End Services Section -->
+    <!-- ======= Counter Section ======= -->
+    <!--<div class="section-counter paralax-mf bg-image" style="background-image: url(assets/img/counters-bg.jpg)">
+      <div class="overlay-mf"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="ion-checkmark-round"></i></span>
+              </div>
+              <div class="counter-num">
+                <p class="counter">450</p>
+                <span class="counter-text">WORKS COMPLETED</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="ion-ios-calendar-outline"></i></span>
+              </div>
+              <div class="counter-num">
+                <p class="counter">15</p>
+                <span class="counter-text">YEARS OF EXPERIENCE</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="ion-ios-people"></i></span>
+              </div>
+              <div class="counter-num">
+                <p class="counter">550</p>
+                <span class="counter-text">TOTAL CLIENTS</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
+              </div>
+              <div class="counter-num">
+                <p class="counter">36</p>
+                <span class="counter-text">AWARD WON</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+    <!-- End Counter Section -->
+    <!-- ======= Links Section ======= -->
+    <section id="work" class="portfolio-mf sect-pt4 route">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="title-box text-center">
+                        <h3 class="title-a">
+                            LINKS
+                        </h3>
+                        <p class="subtitle-a">
+                            Links to my fellow classmates sites and other sites of my interest.
+                        </p>
+                        <div class="line-mf"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="work-box">
+                        <a href="~/Content/assets/img/work-1.jpg" data-gall="portfolioGallery" class="venobox">
+                            <div class="work-img">
+                                <img src="assets/img/work-1.jpg" alt="" class="img-fluid">
+                            </div>
                         </a>
-                    </li>
-                </ul>
-            </dd>
-        </dl>
-    </div>
-    <div class="col-md-4">
-        <dl>
-            <dt>Documentation</dt>
-            <dd>
-                <ul>
-                    <li>
-                        Tutorials: <a href="www.asp.net/identity">www.asp.net/identity</a>
-                    </li>
-                    <li>
-                        StackOverflow: <a href="http://stackoverflow.com/questions/tagged/asp.net-identity">http://stackoverflow.com/questions/tagged/asp.net-identity</a>
-                    </li>
-                    <li>
-                        Twitter: #identity #aspnet
-                    </li>
-                    <li>
-                        <a href="http://curah.microsoft.com/55636/aspnet-identity">ASP.NET Identity on curah</a>
-                    </li>
-                    <li>
-                        Have bugs or suggestions for ASP.NET Identity <a href="http://aspnetidentity.codeplex.com/">http://aspnetidentity.codeplex.com/</a>
-                    </li>
-                </ul>
-            </dd>
-        </dl>
-    </div>
-</div>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">Brain CLingan</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Web Design</span> / <span class="w-date">01 Mar 2021</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="work-box">
+                        <a href="~/Content/assets/img/work-2.jpg" data-gall="portfolioGallery" class="venobox">
+                            <div class="work-img">
+                                <img src="~/Content/assets/img/work-2.jpg" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">David Muolo</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Web Design</span> / <span class="w-date">01 Mar 2021</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="work-box">
+                        <a href="~/Content/assets/img/work-3.jpg" data-gall="portfolioGallery" class="venobox">
+                            <div class="work-img">
+                                <img src="~/Content/assets/img/work-3.jpg" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">Dillon Fisher</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Web Design</span> / <span class="w-date">01 Mar 2021</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="work-box">
+                        <a href="~/Content/assets/img/work-4.jpg" data-gall="portfolioGallery" class="venobox">
+                            <div class="work-img">
+                                <img src="~/Content/assets/img/work-4.jpg" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">James Glover</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="work-box">
+                        <a href="~/Content/assets/img/work-5.jpg" data-gall="portfolioGallery" class="venobox">
+                            <div class="work-img">
+                                <img src="~/Content/assets/img/work-5.jpg" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">Jeremy Sidener</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Web Design</span> / <span class="w-date">01 Mar 2021</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="work-box">
+                        <a href="~/Content/assets/img/work-6.jpg" data-gall="portfolioGallery" class="venobox">
+                            <div class="work-img">
+                                <img src="~/Content/assets/img/work-6.jpg" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">Rachel Mantei</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Web Design</span> / <span class="w-date">01 Mar 2021</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="work-box">
+                        <a href="~/Content/assets/img/work-6.jpg" data-gall="portfolioGallery" class="venobox">
+                            <div class="work-img">
+                                <img src="~/Content/assets/img/work-6.jpg" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">Dylan Schwarz</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Web Design</span> / <span class="w-date">01 Mar 2021</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="work-box">
+                        <a href="~/Content/assets/img/work-6.jpg" data-gall="portfolioGallery" class="venobox">
+                            <div class="work-img">
+                                <img src="~/Content/assets/img/work-6.jpg" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">GitHub</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Repository hosting</span> / <span class="w-date">01 Mar 2021</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <a href="https://github.com/bslenker" target="_blank"> <span class="ion-ios-plus-outline"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="work-box">
+                        <a href="~/Content/assets/img/work-6.jpg" data-gall="portfolioGallery" class="venobox">
+                            <div class="work-img">
+                                <img src="~/Content/assets/img/work-6.jpg" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="work-content">
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <h2 class="w-title">W3Schools</h2>
+                                    <div class="w-more">
+                                        <span class="w-ctegory">Online Web Tutorials</span> / <span class="w-date">01 Mar 2021</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="w-like">
+                                        <a href="https://www.w3schools.com/" target="_blank"> <span class="ion-ios-plus-outline"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Section -->
+    <!-- ======= Testimonials Section =======
+    <div class="testimonials paralax-mf bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
+      <div class="overlay-mf"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="testimonial-mf" class="owl-carousel owl-theme">
+              <div class="testimonial-box">
+                <div class="author-test">
+                  <img src="assets/img/testimonial-2.jpg" alt="" class="rounded-circle b-shadow-a">
+                  <span class="author">Xavi Alonso</span>
+                </div>
+                <div class="content-test">
+                  <p class="description lead">
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                  </p>
+                  <span class="comit"><i class="fa fa-quote-right"></i></span>
+                </div>
+              </div>
+              <div class="testimonial-box">
+                <div class="author-test">
+                  <img src="assets/img/testimonial-4.jpg" alt="" class="rounded-circle b-shadow-a">
+                  <span class="author">Marta Socrate</span>
+                </div>
+                <div class="content-test">
+                  <p class="description lead">
+                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                  </p>
+                  <span class="comit"><i class="fa fa-quote-right"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> End Testimonials Section -->
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="blog-mf sect-pt4 route">
+        <div class="container">
+
+            <div class="title-box text-center">
+                <h2 class="title-a">Resume</h2>
+                <p class="subtitle-a">Over 15 years of combined civilian and military law enforcement leadership experience. Highly motivated professional of critical thinking and teamwork, in a high stress environment. </p>
+                <div class="line-mf"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <h3 class="resume-title">Sumary</h3>
+                    <div class="resume-item pb-0">
+                        <h4>Ben Slenker</h4>
+                        <p><em>Hard working, never quit work mentality with great teamworking skills.</em></p>
+                        <ul>
+                            <li>Kansas City, MO</li>
+                            <li>bslenker@gmail.com</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="resume-title">Education</h3>
+                    <div class="resume-item">
+                        <h4>Bacholers of Science, Sociology </h4>
+                        <h5>2000 - 2005</h5>
+                        <p><em>Kansas State University, Manhattan, KS</em></p>
+                        <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+                    </div>
+                    <div class="resume-item">
+                        <h4>Centriq</h4>
+                        <h5>2019-2020</h5>
+                        <p><em>Kansas City, MO</em></p>
+                        <p>Full Stack Web Development: C#, Bootstrap, JavaScript, HTML, CSS, AngularJS, .NET MVC, SQL, jQuery</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="resume-title">Professional Experience</h3>
+                    <div class="resume-item">
+                        <h4>Police Officer</h4>
+                        <h5>2005 - 2020</h5>
+                        <p><em>Leawood, KS </em></p>
+                        <ul>
+                            <li>Over my 15 year career I served in the Patrol Division, as a Field Training Officer, and in the Traffic Management Unit as a advanced crash investigator.</li>
+                            <li>While in the unit, I led the creation of the department's first Major Crash Investigation Unit.</li>
+                            <li>I was a member of the police department's Honor Guard, Canine Decoy team, Defensive Tactics Instructor, High Risk Vehicle Stop Instructor, and Field Force Operations.</li>
+                            <li>Johnson County Regional Police Academy staff member from 2010-2014 as teacher of Use of Force and Defensive Tactics.</li>
+                        </ul>
+                    </div>
+                    <div class="resume-item">
+                        <h4>Missouri Air National Guard</h4>
+                        <h5>2014-2021</h5>
+                        <p><em>Security Forces, Combat Arms Instructor</em></p>
+                        <ul>
+                            <li>Combat Arms Training and Maintenance Instructor - Instructor of weapon systems handling, techniques and tactics.</li>
+                            <li>Advanced Desginated Marksman Team - Small team tactics in a high stress, attention to detail enviroment</li>
+                            <li>Selected as the Squadron's Airman of the Year in 2015 and 2016</li>
+                            <li>Airman Leadership School 2018 - Attained the top graduate honor of the John Levitow Award for Excellence.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End Resume Section -->
+    <!-- ======= Contact Section ======= -->
+    <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(/Content/assets/img/overlay-bg.jpg)">
+        <div class="overlay-mf"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="contact-mf">
+                        <div id="contact" class="box-shadow-full">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="title-box-2">
+                                        <h5 class="title-left">
+                                            Get in Touch
+                                        </h5>
+                                    </div>
+                                    <div>
+                                        <div class="more-info">
+                                            <p class="lead">
+                                                Lets connect.
+                                            </p>
+                                            <div id="map">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.2748849984255!2d-94.60958528438249!3d38.96339085065597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0e925e366ed0f%3A0x73aec4617abd2f03!2sCentriq%20Training!5e0!3m2!1sen!2sus!4v1612405241709!5m2!1sen!2sus" width="550" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                            </div>
+                                            <ul class="list-ico">
+                                                <li><span class="ion-ios-location"></span> 1740 W 92 St, Kansas City, MO 64114</li>
+                                                <li><span class="ion-ios-telephone"></span> (816) 899-2346</li>
+                                                <li><span class="ion-email"></span> bslenker@gmail.com</li>
+                                            </ul>
+                                        </div>
+                                        <div class="socials">
+                                            <ul>
+                                                <li><a href="https://www.linkedin.com/in/ben-s-816727126/" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span></a></li>
+                                            </ul>
+                                        </div>
+                                        @*<form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                                            <div class="row">
+                                                <div class="col-md-12 mb-3">
+                                                    <div class="form-group">
+                                                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                                        <div class="validate"></div>
+                                                    </div>
+                                                </div>*@
+                                        <!--<div class="col-md-12 mb-3">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                                <div class="validate"></div>
+                                            </div>
+                                        </div>-->
+                                        <!--<div class="col-md-12 mb-3">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                                <div class="validate"></div>
+                                            </div>
+                                        </div>-->
+                                        <!--<div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                                <div class="validate"></div>
+                                            </div>
+                                        </div>-->
+                                        <!--<div class="col-md-12 text-center mb-3">
+                                            <div class="loading">Loading</div>
+                                            <div class="error-message"></div>
+                                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                                        </div>-->
+                                        <!--<div class="col-md-12 text-center">
+                                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                                        </div>-->
+                                        @*</div>
+                                            </form>*@
+                                    </div>
+                                </div>
+                                <!--<div class="col-md-6">
+                                    <div class="title-box-2 pt-4 pt-md-0">
+                                        <h5 class="title-left">
+                                            Get in Touch
+                                        </h5>
+                                    </div>
+                                    <div class="more-info">
+                                        <p class="lead">
+                                            Lets connect.
+                                        </p>
+                                        <ul class="list-ico">
+                                            <li><span class="ion-ios-location"></span> 1740 W 92 St, Kansas City, MO 64114</li>
+                                            <li><span class="ion-ios-telephone"></span> (816) 899-2346</li>
+                                            <li><span class="ion-email"></span> bslenker@gmail.com</li>
+                                        </ul>
+                                    </div>
+                                    <div class="socials">
+                                        <ul>
+                                            <li><a href="https://www.linkedin.com/in/ben-s-816727126/" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->

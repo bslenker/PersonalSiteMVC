@@ -177,6 +177,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
+    <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -185,8 +186,16 @@
   <ItemGroup>
     <Content Include="Content\assets\css\style.css" />
     <Content Include="Content\assets\img\apple-touch-icon.png" />
+    <Content Include="Content\assets\img\classmates\BryanCthumbpicture.jpg" />
+    <Content Include="Content\assets\img\classmates\DavidMthumbpicture.jpg" />
+    <Content Include="Content\assets\img\classmates\DillonFthumbpicture.jpg" />
+    <Content Include="Content\assets\img\classmates\DylanSthumbpicure.jpg" />
+    <Content Include="Content\assets\img\classmates\JamesGthumbpicture.jpg" />
+    <Content Include="Content\assets\img\classmates\JeremySthumbpicture.jpg" />
+    <Content Include="Content\assets\img\classmates\RachelMthumbpicture.jpg" />
     <Content Include="Content\assets\img\counters-bg.jpg" />
     <Content Include="Content\assets\img\favicon.png" />
+    <Content Include="Content\assets\img\GitHub img.jpg" />
     <Content Include="Content\assets\img\intro-bg - Copy.jpg" />
     <Content Include="Content\assets\img\intro-bg.jpg" />
     <Content Include="Content\assets\img\overlay-bg.jpg" />
@@ -198,6 +207,7 @@
     <Content Include="Content\assets\img\post-3.jpg" />
     <Content Include="Content\assets\img\testimonial-2.jpg" />
     <Content Include="Content\assets\img\testimonial-4.jpg" />
+    <Content Include="Content\assets\img\W3Schools img.jpg" />
     <Content Include="Content\assets\img\work-1.jpg" />
     <Content Include="Content\assets\img\work-2.jpg" />
     <Content Include="Content\assets\img\work-3.jpg" />
@@ -582,6 +592,8 @@
     <Content Include="_Archive\assets\vendor\owl.carousel\LICENSE" />
     <Content Include="_Archive\assets\vendor\owl.carousel\README.md" />
     <Content Include="_Archive\assets\vendor\typed.js\typed.min.js.map" />
+    <Content Include="Views\Home\ContactAjax.cshtml" />
+    <Content Include="Views\Home\EmailConfirm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

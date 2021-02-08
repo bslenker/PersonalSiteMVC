@@ -970,7 +970,7 @@ a:hover {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-.testimonials .owl-carousel .owl-item img {
+/*.testimonials .owl-carousel .owl-item img {
   width: auto;
 }
 
@@ -1024,11 +1024,15 @@ a:hover {
   .testimonial-box .description {
     padding: 0 13rem;
   }
-}
+}*/
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+#contactConfirm {
+    display: none;
+}
+
 .footer-paralax {
   padding: 4rem 0 0 0;
 }
@@ -1044,7 +1048,7 @@ a:hover {
   }
 }
 
-.php-email-form .validate {
+/*.php-email-form .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -1119,7 +1123,7 @@ a:hover {
 
 .php-email-form button[type="submit"]:hover {
   background: #3393ff;
-}
+}*/
 
 @-webkit-keyframes animate-loading {
   0% {

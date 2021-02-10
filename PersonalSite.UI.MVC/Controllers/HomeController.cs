@@ -1,7 +1,9 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using System.Net;
 using System.Net.Mail;
 using PersonalSite.UI.MVC.Models;
+
 
 namespace PersonalSite.UI.MVC.Controllers
 {
@@ -34,14 +36,14 @@ namespace PersonalSite.UI.MVC.Controllers
             SmtpClient client = new SmtpClient("mail.benslenker.com");
 
             //Configure your email credentials
-            client.Credentials = new NetworkCredential("Admin@benslenker.com - smarterasp.net", "Chewy13@ - smarterasp.net");
+            client.Credentials = new NetworkCredential("admin@benslenker.com", "Chewy13@");
             
             try
             {
                 //send email
                 client.Send(m);
             }//end try
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 //log error in viewbag to be seen by admins
                 ViewBag.Message = e.StackTrace;

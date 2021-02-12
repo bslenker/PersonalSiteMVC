@@ -186,6 +186,9 @@
   <ItemGroup>
     <Content Include="Content\assets\css\style.css" />
     <Content Include="Content\assets\img\apple-touch-icon.png" />
+    <Content Include="Content\assets\img\BS logo.JPG" />
+    <Content Include="Content\assets\img\BS logo_1.JPG" />
+    <Content Include="Content\assets\img\BS logo_2.JPG" />
     <Content Include="Content\assets\img\classmates\BryanCthumbpicture.jpg" />
     <Content Include="Content\assets\img\classmates\DavidMthumbpicture.jpg" />
     <Content Include="Content\assets\img\classmates\DillonFthumbpicture.jpg" />
@@ -491,6 +494,7 @@
     <Content Include="Content\assets\vendor\owl.carousel\LICENSE" />
     <Content Include="Content\assets\vendor\owl.carousel\README.md" />
     <Content Include="Content\assets\vendor\typed.js\typed.min.js.map" />
+    <Content Include="Content\assets\img\Ben Slenker Resume.pdf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

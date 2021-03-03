@@ -70,7 +70,7 @@
     <div>
         @RenderBody()
     </div>
-
+  
     <!-- ======= Footer ======= -->
     <footer>
         <div class="container">
@@ -90,10 +90,10 @@
                             <p>@Html.Partial("_LoginPartial")</p>
                             @if (Request.IsAuthenticated && User.IsInRole("Admin"))
                             {
-                                
-                                    <p>@Html.ActionLink("RolesAdmin", "Index", "RolesAdmin")</p>
-                                    <p>@Html.ActionLink("UsersAdmin", "Index", "UsersAdmin")</p>
-                                                           
+
+                                <p>@Html.ActionLink("RolesAdmin", "Index", "RolesAdmin")</p>
+                                <p>@Html.ActionLink("UsersAdmin", "Index", "UsersAdmin")</p>
+
                             }
                         </div>
                     </div>

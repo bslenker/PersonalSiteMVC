@@ -21,7 +21,7 @@ namespace PersonalSite.UI.MVC.Controllers
             //sending message...
             string body = $"You have received an email from {cvm.Name} with a subject of {cvm.Subject}. Please respond to {cvm.Email} with your response to the following message: <br/>{cvm.Message}";
             //Message Object from site to my gmail
-            MailMessage m = new MailMessage("admin@benslenker.com", "slenkerbenjamin@gmail.com", cvm.Subject, body);
+            MailMessage m = new MailMessage("example@example.com", "example@yahoo.com", cvm.Subject, body);
 
             //allow HTML in email
             m.IsBodyHtml = true;
@@ -33,10 +33,10 @@ namespace PersonalSite.UI.MVC.Controllers
             m.ReplyToList.Add(cvm.Email);
 
             //configure the mail client
-            SmtpClient client = new SmtpClient("mail.benslenker.com");
+            SmtpClient client = new SmtpClient("mail.example.com");
 
             //Configure your email credentials
-            client.Credentials = new NetworkCredential("admin@benslenker.com", "Chewy13@");
+            client.Credentials = new NetworkCredential("test@example.com", "P@ssw0rd");
             
             try
             {

@@ -1100,11 +1100,11 @@ a:hover {
     }
 
 #rLink {
-    padding:25px;
+    font-size: 20px;
+    padding: 25px;
     text-align: center;
-    text-decoration:underline;
     font-style: italic;
-    font-weight:700;
+    font-weight: 700;
 }
 
 /*--------------------------------------------------------------

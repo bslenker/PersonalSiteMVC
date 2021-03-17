@@ -189,7 +189,7 @@
     <Content Include="Content\assets\img\BS logo.JPG" />
     <Content Include="Content\assets\img\BS logo_1.JPG" />
     <Content Include="Content\assets\img\BS logo_2.JPG" />
-    <Content Include="Content\assets\img\classmates\BryanCthumbpicture.jpg" />
+    <Content Include="Content\assets\img\classmates\BryanCthumbimg.png" />
     <Content Include="Content\assets\img\classmates\DavidMthumbpicture.jpg" />
     <Content Include="Content\assets\img\classmates\DillonFthumbpicture.jpg" />
     <Content Include="Content\assets\img\classmates\DylanSthumbpicure.jpg" />
@@ -201,6 +201,7 @@
     <Content Include="Content\assets\img\counters-bg.jpg" />
     <Content Include="Content\assets\img\favicon.png" />
     <Content Include="Content\assets\img\GitHub img.jpg" />
+    <Content Include="Content\assets\img\icons8-export-pdf-80.png" />
     <Content Include="Content\assets\img\intro-bg - Copy.jpg" />
     <Content Include="Content\assets\img\intro-bg.jpg" />
     <Content Include="Content\assets\img\overlay-bg.jpg" />
